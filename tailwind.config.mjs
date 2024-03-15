@@ -10,12 +10,16 @@ export default {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         accent: 'var(--color-accent)',
+        dark: 'var(--background-color)',
       },
       screens: {
         xs: '360px',
         ...defaultTheme.screens,
         '3xl': '1650px',
       },
+    },
+    fontFamily: {
+      Montserrat: ['Montserrat Variable', 'sans-serif', 'system-ui'],
     },
   },
   plugins: [animations],
