@@ -1,0 +1,28 @@
+---
+import BarSpoon from '@/components/BarSpoon.astro';
+import LineHero from '@/components/LineHero.astro';
+---
+
+<section class='relative'>
+  <LineHero class='absolute -top-32 -left-40 text-white opacity-15 aspect-[1400/667]' />
+  <div class='container max-w-5xl mx-auto flex flex-col justify-center h-full relative'>
+    <img src='/images/logo_size.webp' class='h-16 w-auto aspect-auto absolute top-8 left-0' alt='' srcset='' />
+    <h1 class='text-5xl font-bold'>EnamorArte - Trattoría y Charcutería Artesanal</h1>
+    <h2 class='text-xl font-medium mt-5 max-w-prose'>
+      Nos estamos preparando para EnamorArte con nuestra propuesta reolucionaria
+    </h2>
+  </div>
+  <BarSpoon class='absolute -bottom-10 left-1/2 -translate-x-1/2 animate-sink delay-1000' />
+</section>
+
+<style>
+  section {
+    background-image: url('images/bg.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-height: 90dvh;
+  }
+</style>
