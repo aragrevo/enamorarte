@@ -10,23 +10,29 @@ const imageBg = `url(${image})`;
 <style define:vars={{imageBg}}>
   section {
     background-image: var(--imageBg);
-    background-color: var(--color-accent);
+    background-color: var(--background-color);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
     aspect-ratio: 16/9;
     width: 100%;
-    max-height: 90dvh;
+    min-height: 70dvh;
     color: var(--background-color);
     /*  this is where the magic happens:  */
     background-attachment: fixed;
   }
   section::before {
-    opacity: 0.2;
+    opacity: 0.3;
     position: absolute;
     inset: 0;
     content: '';
     background-color: var(--background-color);
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      max-height: 90dvh;
+    }
   }
 </style>
