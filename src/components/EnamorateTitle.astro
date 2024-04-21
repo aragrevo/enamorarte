@@ -1,0 +1,20 @@
+---
+import type {HTMLTag, Polymorphic} from 'astro/types';
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  //   variant: keyof typeof variantClasses;
+  //   color: keyof typeof colorClasses;
+}>;
+
+const {as: Tag, ...props} = Astro.props;
+---
+
+<Tag class='text-5xl font-bold text-dark uppercase relative customTitle'>
+  <span class='line-through'>&nbsp;E</span>n<span class='love'>amor</span>Art<span class='line-through'>E&nbsp;</span>
+</Tag>
+
+<style is:global>
+  .love {
+    color: var(--color-primary);
+  }
+</style>

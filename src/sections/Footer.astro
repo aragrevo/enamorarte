@@ -1,0 +1,79 @@
+---
+import Instagram from '@/icons/Instagram.astro';
+import Facebook from '@/icons/Facebook.astro';
+---
+
+<!-- <BlockSpacer /> -->
+<footer class='h-auto w-full relative py-32'>
+  <div class='container max-w-4xl mx-auto flex flex-col gap-12 h-full relative items-center'>
+    <h4 class='text-3xl font-bold max-w-prose text-center text-accent'>
+      EnamorArte - Trattoría y Charcutería Artesanal
+    </h4>
+
+    <div>
+      <p class='text-lg font-normal max-w-prose text-center'>Llegamos para ENAMORARTE 😋🍕❤️</p>
+      <p class='text-lg font-normal max-w-prose text-center'>
+        ¡Ven a visitarnos y déjate seducir por el arte de la comida y la bebida!
+      </p>
+    </div>
+
+    <ul class='flex flex-row justify-evenly w-full'>
+      <li>
+        <h5 class='font-medium text-lg mb-4'>Dirección</h5>
+        <span class='text-normal'> Calle 140 #11-05 Bogotá, Colombia </span>
+      </li>
+      <li>
+        <h5 class='font-medium text-lg mb-4'>Reservas</h5>
+        <span class='text-normal'> +57 318 2019515</span>
+      </li>
+    </ul>
+  </div>
+</footer>
+<nav class='bg-black py-6'>
+  <ul class='text-white flex flex-row items-center gap-x-6 justify-center leading-none'>
+    <li>
+      <a
+        href='https://www.facebook.com/EnamorArteTrattoria'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='inline-block hover:scale-110 hover:opacity-70 motion-safe:transition motion-reduce:hover:scale-100'
+      >
+        <Facebook />
+      </a>
+    </li>
+    <li>
+      <a
+        href='https://www.instagram.com/enamorarte_trattoria/'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='inline-block hover:scale-110 hover:opacity-70 motion-safe:transition motion-reduce:hover:scale-100'
+      >
+        <Instagram />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  footer {
+    background-image: url('images/footer-bg.jpg');
+    background-color: var(--background-color);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-height: 70dvh;
+    /*  this is where the magic happens:  */
+    background-attachment: fixed;
+  }
+
+  footer::before {
+    opacity: 0.8;
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-color: var(--background-color);
+  }
+</style>

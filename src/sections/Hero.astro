@@ -1,30 +1,31 @@
 ---
 import BarSpoon from '@/components/BarSpoon.astro';
 import LineHero from '@/components/LineHero.astro';
+import EnamorateTitle from '@/components/EnamorateTitle.astro';
+import SectionCover from '@/components/SectionCover.astro';
 ---
 
-<section class='relative'>
-  <LineHero class='absolute -top-32 -left-40 text-white opacity-15 aspect-[1400/667]' />
-  <div class='container max-w-4xl mx-auto flex flex-col justify-center h-full relative'>
-    <img src='/images/logo_size.webp' class='h-16 w-auto aspect-auto absolute top-8 left-0' alt='' srcset='' />
-    <h1 class='text-5xl font-bold'>EnamorArte - Trattoría y Charcutería Artesanal</h1>
-    <h2 class='text-xl font-medium mt-5 max-w-prose'>
-      Nos estamos preparando para EnamorArte con nuestra propuesta revolucionaria
+<SectionCover image='images/hero-bg.jpg' as='section'>
+  <!-- <LineHero class='absolute -top-32 -left-40 text-white opacity-30 aspect-[1400/667] z-10' /> -->
+  <div class='container max-w-4xl mx-auto flex flex-col justify-center items-center h-full relative'>
+    <img src='/images/logo_colorful.jpg' class='h-32 w-auto aspect-auto' alt='' srcset='' />
+    <EnamorateTitle as='h1' />
+    <h2 class='text-3xl font-medium mt-5 max-w-prose text-center'>
+      Donde los <span class='flavors'>sabores</span> se encuentran y los <span class='hearts'>corazones</span> se en<span
+        class='love'>amor</span
+      >an
     </h2>
   </div>
   <BarSpoon
-    class='absolute -bottom-10 left-1/2 -translate-x-1/2 animate-sink animate-delay-1000 animate-duration-1000 opacity-90'
+    class='absolute text-white -bottom-10 left-1/2 -translate-x-1/2 animate-sink animate-delay-1000 animate-duration-1000 opacity-90'
   />
-</section>
+</SectionCover>
 
 <style>
-  section {
-    background-image: url('images/bg.webp');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    aspect-ratio: 16/9;
-    width: 100%;
-    max-height: 90dvh;
+  .hearts {
+    color: var(--color-accent);
+  }
+  .flavors {
+    color: blueviolet;
   }
 </style>

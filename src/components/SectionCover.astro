@@ -1,0 +1,32 @@
+---
+const {image} = Astro.props;
+const imageBg = `url(${image})`;
+---
+
+<section class='relative'>
+  <slot />
+</section>
+
+<style define:vars={{imageBg}}>
+  section {
+    background-image: var(--imageBg);
+    background-color: var(--color-accent);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-height: 90dvh;
+    color: var(--background-color);
+    /*  this is where the magic happens:  */
+    background-attachment: fixed;
+  }
+  section::before {
+    opacity: 0.2;
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-color: var(--background-color);
+  }
+</style>
